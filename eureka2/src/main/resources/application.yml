@@ -1,0 +1,18 @@
+server:
+  port: 1102
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    # 实例是否在eureka服务器上注册自己的信息以供其他服务发现，默认为true
+    register-with-eureka: false
+    # 此客户端是否获取eureka服务器注册表上的注册信息，默认为true
+    fetch-registry: false
+    # 与Eureka注册服务中心的通信zone和url地址
+    service-url:
+      defaultZone: http://eureka1:1101/eureka/
+  server:
+    # 服务端开启自我保护模式。无论什么情况，服务端都会保持一定数量的服务。避免client与server的网络问题，而出现大量的服务被清除
+    enable-self-preservation: false
+    # 开启清除无效服务的定时任务，时间间隔。默认1分钟
+    eviction-interval-timer-in-ms: 5000

@@ -1,0 +1,14 @@
+server:
+  port: 1202
+spring:
+  application:
+    name: zwz-provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:1101/eureka,http://eureka2:1102/eureka/
+  instance:
+    # 该实例给服务中心发送心跳的间隔时间，用于表明该服务实例可用
+    lease-renewal-interval-in-seconds: 2
+    # 服务中心删除此服务实例的等待时间(秒为单位),时间间隔为最后一次服务中心接受到的心跳时间
+    lease-expiration-duration-in-seconds: 5
