@@ -205,6 +205,20 @@ public Result<Object> delByIds(@RequestParam String[] ids){
 
 ![输入图片说明](image/19.png#pic_center)
 
+资产入库单实体类的字段明细如下：
+
+| 字段名称  | 数据类型   | 长度 | 字段含义 | 备注       |
+| --------- | ---------- | ---- | -------- | ---------- |
+| Id        | Varchar    | 255  | 唯一标识 | 非空，主键 |
+| assetId   | Varchar    | 255  | 资产ID   | 非空，外键 |
+| assetName | Varchar    | 255  | 资产名称 | 非空       |
+| invoice   | Varchar    | 255  | 发票单号 | 非空       |
+| model     | Varchar    | 15   | 型号     | 非空       |
+| unitPrice | BigDecimal | 15   | 单价     | 非空       |
+| nature    | Varchar    | 15   | 性质     | 非空       |
+| number    | BigDecimal | 15   | 入库数量 | 非空       |
+| remarks   | Varchar    | 255  | 备注     |            |
+
 用户可以对某个资产进行入库操作，点击顶部的添加按钮，进入到资产入库界面，如下图所示。
 
 ![输入图片说明](image/20.png#pic_center)
